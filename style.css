@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #24232a;
+}
+.container {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #030013;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #fe03f6, #fe03f6);
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    animation: anime 7s linear infinite;
+}
+.container::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #2376f5, #2376f5);
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    animation: anime 7s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes anime {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.form {
+    position: absolute;
+    inset: 3px;
+    background: #24232a;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.form h2 {
+    text-align: center;
+    color: #fe03f6;
+    letter-spacing: 3px;
+}
+.box {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.box input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    border-color: #fe03f6;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 18px;
+    outline: none;
+    color: #fe03f6;
+}
+input[type="submit"] {
+    border: 1px solid #fff;
+    background: #fe03f6;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
